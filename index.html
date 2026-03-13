@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* Estructura de 3 columnas */
+        main {
+            display: grid;
+            grid-template-columns: 250px 1fr 300px; /* Sidebar - Contenido - Aside */
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto; /* Centra todo el layout en la pantalla */
+        }
+
+        /* Centrado del contenido central */
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Alinea todo el contenido central al centro horizontal */
+        }
+
+        /* Aseguramos que la tarjeta de perfil ocupe el ancho necesario pero centrada */
+        section {
+            width: 100%;
+            max-width: 600px; /* Ancho máximo para que no se estire demasiado */
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <nav>
+            <h1>Loop</h1>
+            <ul>
+                <li>Inicio</li>
+                <li>Perfil</li>
+                <li>Notificaciones</li>
+                <li>Guardados</li>
+            </ul>
+        </nav>
+
+        <div class="content-wrapper">
+            <section>
+                <header>
+                    <img src="foto-perfil.jpg" alt="Usuario">
+                    <h2>Usuario</h2>
+                    <p>@Usuario</p>
+                    <p>Describe aqui lo que te gusta.</p>
+                    <div>
+                        <span><strong>0</strong> Seguidores</span>
+                        <span><strong>0</strong> Siguiendo</span>
+                        <span><strong>0</strong> Posts</span>
+                    </div>
+                    <button>Editar Perfil</button>
+                </header>
+
+                <nav>
+                    <button>Posts</button>
+                    <button>Fotos</button>
+                    <button>Información</button>
+                </nav>
+
+                <article>
+                    <header>
+                        <strong>Usuario</strong>
+                        <span>hace 5 min</span>
+                    </header>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                </article>
+            </section>
+        </div>
+
+        <aside>
+            <section>
+                <h3>Tendencias</h3>
+                <ul>
+                    <li>#DiseñoDeInterfaces</li>
+                    <li>#Glassmorphism</li>
+                </ul>
+            </section>
+        </aside>
+    </main>
+</body>
+</html>
